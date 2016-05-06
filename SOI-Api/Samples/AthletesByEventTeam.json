@@ -1,0 +1,253 @@
+// JavaScript source code
+{
+    "events": [
+        {
+            "name": "BC Bocce Doubles",
+            "guid": "3315286100693430",
+            "division": [
+                {
+                    "name": "F1",
+                    "round": "final",
+                    "teams": [
+                        {
+                            "guid": "3315286100693430",
+                            "name": "SO Alabama A",
+                            "delegation": {
+                                "name": "Team USA",
+                                "guid": "0481639183764364"
+                            },
+                            "group": "SO Alabama",
+                            "date": "2014-09-17T00:00:00+00:00",
+                            "score": "0 min, 20.89 sec",
+                            "place": "1",
+                            "matchid": "",
+                            "matchstatus": "official",
+                            "divisionstatus": "final-official",
+                            "venue": "main court",
+                            "personalbest": false,
+                            "athletes": [
+                                {
+                                    "guid": "7565882899984260",
+                                    "name": {
+                                        "first": "Maria",
+                                        "last": "Sanchez"
+                                    },
+                                    "bib": "606",
+                                    "imagepath": "http://media.specialolympics.org/7565882899984260.png"
+                                },
+                                {
+                                    "guid": "3315286100693430",
+                                    "name": {
+                                        "first": "Uhryn",
+                                        "last": "Oksana"
+                                    },
+                                    "bib": "659",
+                                    "imagepath": "http://media.specialolympics.org/3315286100693430.png"
+                                }
+                            ]
+                        },
+                        {
+                            "guid": "8319919182778857",
+                            "name": "SO Hungary A",
+                            "delegation": {
+                                "name": "SO Hungary",
+                                "guid": "9276101140194750"
+                            },
+                            "group": "",
+                            "date": "2014-09-17T00:00:00+00:00",
+                            "score": "0 min, 20.96 sec",
+                            "place": "2",
+                            "matchid": "",
+                            "matchstatus": "official",
+                            "divisionstatus": "final-official",
+                            "venue": "main court",
+                            "personalbest": false,
+                            "athletes": [
+                                {
+                                    "guid": "5583897083367105",
+                                    "name": {
+                                        "first": "Gabor",
+                                        "last": "Dudas"
+                                    },
+                                    "bib": "111",
+                                    "imagepath": "http://media.specialolympics.org/5583897083367105.png"
+                                },
+                                {
+                                    "guid": "7632172153796209",
+                                    "name": {
+                                        "first": "Guy",
+                                        "last": "Chevalley"
+                                    },
+                                    "bib": "222",
+                                    "imagepath": "http://media.specialolympics.org/7632172153796209.png"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "F1",
+                    "round": "preliminary",
+                    "teams": [
+                        {
+                            "guid": "3315286100693430",
+                            "name": "SO Alabama A",
+                            "delegation": {
+                                "name": "Team USA",
+                                "guid": "0481639183764364"
+                            },
+                            "group": "SO Alabama",
+                            "date": "2014-09-16T00:00:00+00:00",
+                            "score": "0 min, 21.89 sec",
+                            "place": "",
+                            "matchid": "",
+                            "matchstatus": "official",
+                            "divisionstatus": "final-official",
+                            "venue": "main court",
+                            "personalbest": false,
+                            "athletes": [
+                                {
+                                    "guid": "7565882899984260",
+                                    "name": {
+                                        "first": "Maria",
+                                        "last": "Sanchez"
+                                    },
+                                    "bib": "606",
+                                    "imagepath": "http://media.specialolympics.org/7565882899984260.png"
+                                },
+                                {
+                                    "guid": "3315286100693430",
+                                    "name": {
+                                        "first": "Uhryn",
+                                        "last": "Oksana"
+                                    },
+                                    "bib": "659",
+                                    "imagepath": "http://media.specialolympics.org/3315286100693430.png"
+                                }
+                            ]
+                        },
+                        {
+                            "guid": "8319919182778857",
+                            "name": "SO Hungary A",
+                            "delegation": {
+                                "name": "SO Hungary",
+                                "guid": "9276101140194750"
+                            },
+                            "group": "",
+                            "date": "2014-09-16T00:00:00+00:00",
+                            "score": "0 min, 21.96 sec",
+                            "place": "",
+                            "matchid": "",
+                            "matchstatus": "official",
+                            "divisionstatus": "final-official",
+                            "venue": "main court",
+                            "personalbest": false,
+                            "athletes": [
+                                {
+                                    "guid": "5583897083367105",
+                                    "name": {
+                                        "first": "Gabor",
+                                        "last": "Dudas"
+                                    },
+                                    "bib": "111",
+                                    "imagepath": "http://media.specialolympics.org/5583897083367105.png"
+                                },
+                                {
+                                    "guid": "7632172153796209",
+                                    "name": {
+                                        "first": "Guy",
+                                        "last": "Chevalley"
+                                    },
+                                    "bib": "222",
+                                    "imagepath": "http://media.specialolympics.org/7632172153796209.png"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "DBL.01",
+                    "round": "final",
+                    "teams": [
+                        {
+                            "guid": "5583897083367105",
+                            "name": "SO New Jersey A",
+                            "delegation": {
+                                "name": "Team USA",
+                                "guid": "0481639183764364"
+                            },
+                            "group": "SO New Jersey",
+                            "date": "2014-09-17T00:00:00+00:00",
+                            "score": "0 min, 20.96 sec",
+                            "place": "1",
+                            "matchid": "",
+                            "matchstatus": "official",
+                            "divisionstatus": "final-official",
+                            "venue": "main court",
+                            "personalbest": false,
+                            "athletes": [
+                                {
+                                    "guid": "1202063918224349",
+                                    "name": {
+                                        "first": "Jane",
+                                        "last": "Doe"
+                                    },
+                                    "bib": "123",
+                                    "imagepath": "http://media.specialolympics.org/1202063918224349.png"
+                                },
+                                {
+                                    "guid": "8038887230423092",
+                                    "name": {
+                                        "first": "Michael",
+                                        "last": "Smith"
+                                    },
+                                    "bib": "234",
+                                    "imagepath": "http://media.specialolympics.org/8038887230423092.png"
+                                }
+                            ]
+                        },
+                        {
+                            "guid": "8346270644467651",
+                            "name": "SO Canada A",
+                            "delegation": {
+                                "name": "SO Canada",
+                                "guid": "9276101140194750"
+                            },
+                            "group": "",
+                            "date": "2014-09-17T00:00:00+00:00",
+                            "score": "0 min, 22.96 sec",
+                            "place": "2",
+                            "matchid": "",
+                            "matchstatus": "official",
+                            "divisionstatus": "final-official",
+                            "venue": "main court",
+                            "personalbest": false,
+                            "athletes": [
+                                {
+                                    "guid": "4147416910695457",
+                                    "name": {
+                                        "first": "Erik",
+                                        "last": "Jones"
+                                    },
+                                    "bib": "656",
+                                    "imagepath": "http://media.specialolympics.org/4147416910695457.png"
+                                },
+                                {
+                                    "guid": "3321740766100849",
+                                    "name": {
+                                        "first": "Hanz",
+                                        "last": "Lafleur"
+                                    },
+                                    "bib": "676",
+                                    "imagepath": "http://media.specialolympics.org/3321740766100849.png"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+
+    ]
+
+}

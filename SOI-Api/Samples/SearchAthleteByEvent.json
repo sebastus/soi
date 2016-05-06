@@ -1,0 +1,122 @@
+// JavaScript source code
+{
+    "events": [
+        {
+            "name": "AQ 10M Assisted Swim",
+            "guid": "3315286100693430",
+            "division": [
+                {
+                    "name": "F1",
+                    "round": "final",
+                    "athletes": [
+                        {
+                            "guid": "3315286100693430",
+                            "name": {
+                                "first": "Uhryn",
+                                "last": "Oksana"
+                            },
+                            "imagepath": "http://media.specialolympics.org/3315286100693430.png",
+                            "delegation": {
+                                "name": "Team USA",
+                                "guid": "0481639183764364"
+                            },
+                            "group": "SO Alabama",
+                            "bib": "659",
+                            "date": "2014-09-17T00:00:00+00:00",
+                            "score": "0 min, 20.89 sec",
+                            "place": "1",
+                            "matchid": "",
+                            "matchstatus": "official",
+                            "divisionstatus": "final-official",
+                            "venue": "main pool",
+                            "personalbest": false
+
+                        }
+                    ]
+                },
+                {
+                    "name": "F1",
+                    "round": "preliminary",
+                    "athletes": [
+                        {
+                            "guid": "3315286100693430",
+                            "name": {
+                                "first": "Uhryn",
+                                "last": "Oksana"
+                            },
+                            "imagepath": "http://media.specialolympics.org/3315286100693430.png",
+                            "delegation": {
+                                "name": "Team USA",
+                                "guid": "0481639183764364"
+                            },
+                            "group": "SO Alabama",
+                            "bib": "659",
+                            "date": "2014-09-17T00:00:00+00:00",
+                            "score": "0 min, 20.89 sec",
+                            "place": "1",
+                            "matchid": "",
+                            "matchstatus": "official",
+                            "divisionstatus": "final-official",
+                            "venue": "main pool",
+                            "personalbest": false
+
+                        },
+                        {
+                            "guid": "7565882899984260",
+                            "name": {
+                                "first": "Maria",
+                                "last": "Sanchez"
+                            },
+                            "imagepath": "http://media.specialolympics.org/7565882899984260.png",
+                            "delegation": {
+                                "name": "SO Spain",
+                                "guid": "5440971254471671"
+                            },
+                            "group": "",
+                            "bib": "606",
+                            "date": "2014-09-17T00:00:00+00:00",
+                            "score": "0 min, 21.34 sec",
+                            "place": "1",
+                            "matchid": "",
+                            "matchstatus": "official",
+                            "divisionstatus": "final-official",
+                            "venue": "main pool",
+                            "personalbest": true
+
+                        }
+                    ]
+                },
+                {
+                    "name": "F2",
+                    "round": "final",
+                    "athletes": [
+                        {
+                            "guid": "7565882899984260",
+                            "name": {
+                                "first": "Maria",
+                                "last": "Sanchez"
+                            },
+                            "imagepath": "http://media.specialolympics.org/7565882899984260.png",
+                            "delegation": {
+                                "name": "SO Spain",
+                                "guid": "5440971254471671"
+                            },
+                            "bib": "606",
+                            "date": "2014-09-17T00:00:00+00:00",
+                            "score": "0 min, 21.56 sec",
+                            "group": "",
+                            "place": "1",
+                            "matchid": "",
+                            "matchstatus": "official",
+                            "divisionstatus": "final-official",
+                            "venue": "main pool",
+                            "personalbest": false
+
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+
+}

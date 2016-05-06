@@ -1,0 +1,93 @@
+{
+    "schedule": [
+        {
+            "date": "2014-09-17T00:00:00+00:00",
+            "times": [
+                {
+                    "startime": "2014-09-17T08:00:00+00:00",
+                    "sports": [
+                        {
+                            "guid": "5619840753284272",
+                            "name": "Aquatics/Swimming",
+                            "events": [
+                                {
+                                    "guid": "94332",
+                                    "name": "AQ 15 M Unassisted Swim",
+                                    "venue": "main pool",
+                                    "round": "final"
+                                },
+                                {
+                                    "guid": "87632",
+                                    "name": "AQ 100M Breaststroke",
+                                    "venue": "main pool",
+                                    "round": "preliminary"
+                                },
+                                {
+                                    "guid": "94345",
+                                    "name": "AQ 100M Freestyle",
+                                    "venue": "main pool",
+                                    "round": "final"
+                                }
+                            ]
+                        },
+                        {
+                            "guid": "5011072979434449",
+                            "name": "Athletics/Track and Field",
+                            "events": [
+                                {
+                                    "guid": "55838",
+                                    "name": "AT 100M Run",
+                                    "venue": "track",
+                                    "round": "final"
+                                },
+                                {
+                                    "guid": "98033",
+                                    "name": "AT 200M Run",
+                                    "venue": "track",
+                                    "round": "final"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "startime": "2014-09-17T08:15:00+00:00",
+                    "sports": [
+                        {
+                            "guid": "5619840753284272",
+                            "name": "Aquatics/Swimming",
+                            "events": [
+                                {
+                                    "guid": "94332",
+                                    "name": "AQ 15 M Unassisted Swim",
+                                    "venue": "main pool"
+                                },
+                                {
+                                    "guid": "94345",
+                                    "name": "AQ 100M Freestyle",
+                                    "venue": "main pool"
+                                }
+                            ]
+                        },
+                        {
+                            "guid": "5011072979434449",
+                            "name": "Athletics/Track and Field",
+                            "events": [
+                                {
+                                    "guid": "55838",
+                                    "name": "AT 100M Run",
+                                    "venue": "track"
+                                },
+                                {
+                                    "guid": "99796",
+                                    "name": "AT 400M Run",
+                                    "venue": "track"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

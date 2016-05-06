@@ -1,0 +1,61 @@
+﻿Application Key = aDBWnfLpEFchpHwCmQcMVHBUyPpEwB57 (test site)
+Application key = DLTlcBpQjRioPYnsdUZtsJEkEyXVJP94 (production site)
+
+GameId = RPTUG15U59PPDF64  (athens)
+GameId = 269NEG250LG6LVSS (LA2015)
+
+athleteId = 843DOQ8AW38HZFOL
+
+event = 02FLC4Z4PSB9WPI2 (individual)
+event = 05IZM23CA0IT2PY8 (team)
+
+https://soi-api-westus.azure-mobile.net/api/events/           <-- should fail with 404
+
+https://soi-api-westus.azure-mobile.net/api/events/RPTUG15U59PPDF64
+https://soi-api-prod-west.azure-mobile.net/api/events/269NEG250LG6LVSS		<-- production database
+
+https://soi-api-westus.azure-mobile.net/api/delegations/RPTUG15U59PPDF64
+
+https://soi-api-westus.azure-mobile.net/api/athletes/?Name=Dav
+https://soi-api-prod-west.azure-mobile.net/api/athletes/?FirstName=Dav*
+
+https://soi-api-westus.azure-mobile.net/api/athletes/?FirstName=Dav*&LastName=Gamero
+
+https://soi-api-westus.azure-mobile.net/api/athletes/?BibNumber=154
+
+https://soi-api-westus.azure-mobile.net/api/athletes/?Name=David
+
+https://soi-api-westus.azure-mobile.net/api/athletes/?GamesId=RPTUG15U59PPDF64&Delegation=AF.SO%20Botswana
+https://soi-api-prod-west.azure-mobile.net/api/athletes/?GamesId=269NEG250LG6LVSS&Delegation=AF.SO%20Botswana
+
+https://soi-api-westus.azure-mobile.net/api/events/?gamesId=RPTUG15U59PPDF64&eventIdOrCode=05IZM23CA0IT2PY8  <-- team
+https://soi-api-westus.azure-mobile.net/api/events/?gamesId=RPTUG15U59PPDF64&eventIdOrCode=AT100W  <-- team
+
+https://soi-api-westus.azure-mobile.net/api/events/?gamesId=RPTUG15U59PPDF64&eventIdOrCode=02FLC4Z4PSB9WPI2  <-- individual
+https://soi-api-westus.azure-mobile.net/api/events/?gamesId=RPTUG15U59PPDF64&eventIdOrCode=JULEV1M
+
+https://soi-api-westus.azure-mobile.net/api/schedule/?gamesId=RPTUG15U59PPDF64&fromDate=01012015&toDate=01012015
+
+https://soi-api-westus.azure-mobile.net/api/schedule/?gamesId=RPTUG15U59PPDF64&fromDate=06262011&toDate=06262011
+https://soi-api-prod-west.azure-mobile.net/api/schedule/?gamesId=269NEG250LG6LVSS&delegation=SKN&fromDate=07262015&toDate=07262015
+https://soi-api-prod-west.azure-mobile.net/api/schedule/?gamesId=269NEG250LG6LVSS&delegation=USA
+
+
+https://soi-api-westus.azure-mobile.net/api/schedule/?gamesId=RPTUG15U59PPDF64&delegation=yyyyyy&fromDate=mmddyyyy&toDate=mmddyyyy
+
+
+https://soi-api-westus.azure-mobile.net/api/Events?gamesId=RPTUG15U59PPDF64&eventIdOrCode=AQ25BS
+
+
+https://soi-api-westus.azure-mobile.net/api/Athletes?gamesId=RPTUG15U59PPDF64&delegation=AF.SO%20Botswana
+https://soi-api-westus.azure-mobile.net/api/Athletes?gamesId=RPTUG15U59PPDF64&delegation=AF.SO%20Cote%20d%E2%80%99Ivoire
+https://soi-api-westus.azure-mobile.net/api/Athletes?gamesId=RPTUG15U59PPDF64&delegation=AF.SO%20Kenya
+https://soi-api-westus.azure-mobile.net/api/Athletes?gamesId=RPTUG15U59PPDF64&delegation=AF.SO%20Namibia
+https://soi-api-westus.azure-mobile.net/api/Athletes?gamesId=RPTUG15U59PPDF64&delegation=AF.SO%20Nigeria
+https://soi-api-westus.azure-mobile.net/api/Athletes?gamesId=RPTUG15U59PPDF64&delegation=AF.SO%20South%20Africa
+https://soi-api-westus.azure-mobile.net/api/Athletes?gamesId=RPTUG15U59PPDF64&delegation=AP.SO%20Australia
+https://soi-api-westus.azure-mobile.net/api/Athletes?gamesId=RPTUG15U59PPDF64&delegation=AP.SO%20Bangladesh
+https://soi-api-westus.azure-mobile.net/api/Athletes?gamesId=RPTUG15U59PPDF64&delegation=AP.SO%20Bharat%20(India)
+https://soi-api-westus.azure-mobile.net/api/Athletes?gamesId=RPTUG15U59PPDF64&delegation=AP.SO%20Brunei%20Darussalam
+https://soi-api-westus.azure-mobile.net/api/Athletes?gamesId=RPTUG15U59PPDF64&delegation=AP.SO%20Indonesia
+

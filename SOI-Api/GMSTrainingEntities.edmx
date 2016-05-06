@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="GMSTRAININGModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="apiGetDelegationsListByGameID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="GameId" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="apiGetEventsListByGameID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="GameId" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="apiGetGamesSchedule" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="GameId" Type="nvarchar" Mode="In" />
+          <Parameter Name="FromDate" Type="datetime" Mode="In" />
+          <Parameter Name="ToDate" Type="datetime" Mode="In" />
+          <Parameter Name="Delegation" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="apiSearchAthleteByEvent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Event" Type="nvarchar" Mode="In" />
+          <Parameter Name="GameId" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="apiSearchAthleteByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="BibNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="Name" Type="nvarchar" Mode="In" />
+          <Parameter Name="GameId" Type="nvarchar" Mode="In" />
+          <Parameter Name="Delegation" Type="nvarchar" Mode="In" />
+          <Parameter Name="Group" Type="nvarchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="GMSTRAININGModelStoreContainer" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GMSTRAININGModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="GMSTRAININGEntities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="apiGetDelegationsListByGameID" ReturnType="Collection(GMSTRAININGModel.apiGetDelegationsListByGameID_Result)">
+          <Parameter Name="GameId" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="apiGetEventsListByGameID" ReturnType="Collection(GMSTRAININGModel.apiGetEventsListByGameID_Result)">
+          <Parameter Name="GameId" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="apiGetGamesSchedule" ReturnType="Collection(GMSTRAININGModel.apiGetGamesSchedule_Result)">
+            <Parameter Name="GameId" Mode="In" Type="String" />
+            <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+            <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+            <Parameter Name="Delegation" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="apiSearchAthleteByID" ReturnType="Collection(GMSTRAININGModel.apiSearchAthleteByID_Result)">
+            <Parameter Name="BibNumber" Mode="In" Type="String" />
+            <Parameter Name="Name" Mode="In" Type="String" />
+            <Parameter Name="GameId" Mode="In" Type="String" />
+            <Parameter Name="Delegation" Mode="In" Type="String" />
+            <Parameter Name="Group" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="apiSearchAthleteByEvent" ReturnType="Collection(GMSTRAININGModel.apiSearchAthleteByEvent_Result2)">
+            <Parameter Name="Event" Mode="In" Type="String" />
+            <Parameter Name="GameId" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="apiGetDelegationsListByGameID_Result">
+          <Property Type="String" Name="dlgn_guid" Nullable="false" MaxLength="16" />
+          <Property Type="String" Name="dlgn_name" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="dlgn_Code" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="apiGetEventsListByGameID_Result">
+          <Property Type="String" Name="sprt_guid" Nullable="false" MaxLength="16" />
+          <Property Type="String" Name="sprt_name" Nullable="false" MaxLength="90" />
+          <Property Type="String" Name="sprt_Code" Nullable="true" MaxLength="16" />
+          <Property Type="String" Name="evnt_guid" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="evnt_name" Nullable="false" MaxLength="90" />
+          <Property Type="String" Name="EventType" Nullable="false" MaxLength="1" />
+          <Property Type="Boolean" Name="IsBracketed" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="apiGetGamesSchedule_Result">
+          <Property Type="DateTime" Name="schd_date" Nullable="true" />
+          <Property Type="DateTime" Name="schd_time" Nullable="true" Precision="23" />
+          <Property Type="String" Name="sprt_guid" Nullable="false" MaxLength="16" />
+          <Property Type="String" Name="sprt_name" Nullable="false" MaxLength="90" />
+          <Property Type="String" Name="evnt_guid" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="evnt_name" Nullable="false" MaxLength="90" />
+          <Property Type="String" Name="evnt_venue" Nullable="true" MaxLength="182" />
+          <Property Type="Int32" Name="evnt_round" Nullable="false" />
+          <Property Type="String" Name="EventType" Nullable="false" MaxLength="1" />
+          <Property Type="Boolean" Name="IsBracketed" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="apiSearchAthleteByEvent_Result">
+          <Property Type="String" Name="evnt_name" Nullable="false" MaxLength="90" />
+          <Property Type="String" Name="evnt_guid" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="dvsn_name" Nullable="false" MaxLength="20" />
+          <Property Type="Int32" Name="dvsn_round" Nullable="false" />
+          <Property Type="String" Name="team_guid" Nullable="true" MaxLength="16" />
+          <Property Type="String" Name="team_name" Nullable="true" MaxLength="90" />
+          <Property Type="String" Name="athl_guid" Nullable="false" MaxLength="16" />
+          <Property Type="String" Name="athl_first" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="athl_middle" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="athl_last" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="athl_imagepath" Nullable="false" MaxLength="33" />
+          <Property Type="String" Name="delg_guid" Nullable="false" MaxLength="16" />
+          <Property Type="String" Name="delg_name" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="athl_group" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="athl_bib" Nullable="true" MaxLength="16" />
+          <Property Type="DateTime" Name="athl_date" Nullable="true" Precision="23" />
+          <Property Type="String" Name="athl_score" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="athl_place" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="rslt_matchid" Nullable="true" MaxLength="16" />
+          <Property Type="String" Name="athl_matchstatus" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="athl_divisionstatus" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="athl_venue" Nullable="true" MaxLength="274" />
+          <Property Type="Boolean" Name="athl_personalbest" Nullable="true" />
+          <Property Type="Boolean" Name="IsBracketed" Nullable="false" />
+          <Property Type="String" Name="EventType" Nullable="false" MaxLength="1" />
+          <Property Type="Boolean" Name="IsBracketed1" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="apiSearchAthleteByID_Result">
+          <Property Type="String" Name="athl_guid" Nullable="false" MaxLength="16" />
+          <Property Type="String" Name="athl_first" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="athl_middle" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="athl_last" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="athl_group" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="athl_imagepath" Nullable="false" MaxLength="33" />
+          <Property Type="String" Name="delg_guid" Nullable="false" MaxLength="16" />
+          <Property Type="String" Name="delg_name" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="game_guid" Nullable="false" MaxLength="16" />
+          <Property Type="String" Name="game_name" Nullable="false" MaxLength="90" />
+          <Property Type="String" Name="sprt_guid" Nullable="false" MaxLength="16" />
+          <Property Type="String" Name="sprt_name" Nullable="false" MaxLength="90" />
+          <Property Type="String" Name="evnt_guid" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="evnt_name" Nullable="false" MaxLength="90" />
+          <Property Type="String" Name="rslt_bib" Nullable="true" MaxLength="16" />
+          <Property Type="String" Name="rslt_division" Nullable="false" MaxLength="20" />
+          <Property Type="DateTime" Name="rslt_date" Nullable="true" Precision="23" />
+          <Property Type="String" Name="rslt_score" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="rslt_place" Nullable="true" MaxLength="20" />
+          <Property Type="Int32" Name="rslt_round" Nullable="false" />
+          <Property Type="String" Name="rslt_matchid" Nullable="true" MaxLength="16" />
+          <Property Type="String" Name="rslt_matchstatus" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="rslt_divisionstatus" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="rslt_venue" Nullable="true" MaxLength="274" />
+          <Property Type="Boolean" Name="rslt_personalbest" Nullable="true" />
+          <Property Type="String" Name="EventType" Nullable="false" MaxLength="1" />
+          <Property Type="Boolean" Name="IsBracketed" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="apiSearchAthleteByEvent_Result1">
+          <Property Type="String" Name="evnt_name" Nullable="false" MaxLength="90" />
+          <Property Type="String" Name="evnt_guid" Nullable="true" MaxLength="20" />
+          <Property Type="Boolean" Name="IsBracketed" Nullable="false" />
+          <Property Type="String" Name="dvsn_name" Nullable="false" MaxLength="20" />
+          <Property Type="Int32" Name="dvsn_round" Nullable="false" />
+          <Property Type="String" Name="team_guid" Nullable="true" MaxLength="16" />
+          <Property Type="String" Name="team_name" Nullable="true" MaxLength="90" />
+          <Property Type="String" Name="athl_guid" Nullable="false" MaxLength="16" />
+          <Property Type="String" Name="athl_first" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="athl_middle" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="athl_last" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="athl_imagepath" Nullable="false" MaxLength="33" />
+          <Property Type="String" Name="delg_guid" Nullable="false" MaxLength="16" />
+          <Property Type="String" Name="delg_name" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="athl_group" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="athl_bib" Nullable="true" MaxLength="16" />
+          <Property Type="DateTime" Name="athl_date" Nullable="true" Precision="23" />
+          <Property Type="String" Name="athl_score" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="athl_place" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="rslt_matchid" Nullable="true" MaxLength="16" />
+          <Property Type="String" Name="athl_matchstatus" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="athl_divisionstatus" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="athl_venue" Nullable="true" MaxLength="274" />
+          <Property Type="Boolean" Name="athl_personalbest" Nullable="true" />
+          <Property Type="String" Name="EventType" Nullable="false" MaxLength="1" />
+        </ComplexType>
+        <ComplexType Name="apiSearchAthleteByEvent_Result2">
+          <Property Type="String" Name="evnt_name" Nullable="false" MaxLength="90" />
+          <Property Type="String" Name="evnt_guid" Nullable="true" MaxLength="20" />
+          <Property Type="Boolean" Name="IsBracketed" Nullable="false" />
+          <Property Type="String" Name="dvsn_name" Nullable="false" MaxLength="20" />
+          <Property Type="Int32" Name="dvsn_round" Nullable="false" />
+          <Property Type="String" Name="team_guid" Nullable="true" MaxLength="16" />
+          <Property Type="String" Name="team_name" Nullable="true" MaxLength="90" />
+          <Property Type="String" Name="athl_guid" Nullable="false" MaxLength="16" />
+          <Property Type="String" Name="athl_first" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="athl_middle" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="athl_last" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="athl_imagepath" Nullable="false" MaxLength="33" />
+          <Property Type="String" Name="delg_guid" Nullable="false" MaxLength="16" />
+          <Property Type="String" Name="delg_name" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="athl_group" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="athl_bib" Nullable="true" MaxLength="16" />
+          <Property Type="DateTime" Name="athl_date" Nullable="true" Precision="23" />
+          <Property Type="String" Name="athl_score" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="athl_place" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="rslt_matchid" Nullable="true" MaxLength="16" />
+          <Property Type="String" Name="athl_matchstatus" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="athl_divisionstatus" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="athl_venue" Nullable="true" MaxLength="274" />
+          <Property Type="Boolean" Name="athl_personalbest" Nullable="true" />
+          <Property Type="String" Name="EventType" Nullable="false" MaxLength="1" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GMSTRAININGModelStoreContainer" CdmEntityContainer="GMSTRAININGEntities" >
+          <FunctionImportMapping FunctionImportName="apiGetDelegationsListByGameID" FunctionName="GMSTRAININGModel.Store.apiGetDelegationsListByGameID">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GMSTRAININGModel.apiGetDelegationsListByGameID_Result">
+                <ScalarProperty Name="dlgn_guid" ColumnName="dlgn_guid" />
+                <ScalarProperty Name="dlgn_name" ColumnName="dlgn_name" />
+                <ScalarProperty Name="dlgn_Code" ColumnName="dlgn_Code" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="apiGetEventsListByGameID" FunctionName="GMSTRAININGModel.Store.apiGetEventsListByGameID">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GMSTRAININGModel.apiGetEventsListByGameID_Result">
+                <ScalarProperty Name="sprt_guid" ColumnName="sprt_guid" />
+                <ScalarProperty Name="sprt_name" ColumnName="sprt_name" />
+                <ScalarProperty Name="sprt_Code" ColumnName="sprt_Code" />
+                <ScalarProperty Name="evnt_guid" ColumnName="evnt_guid" />
+                <ScalarProperty Name="evnt_name" ColumnName="evnt_name" />
+                <ScalarProperty Name="EventType" ColumnName="EventType" />
+                <ScalarProperty Name="IsBracketed" ColumnName="IsBracketed" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="apiGetGamesSchedule" FunctionName="GMSTRAININGModel.Store.apiGetGamesSchedule">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GMSTRAININGModel.apiGetGamesSchedule_Result">
+                <ScalarProperty Name="schd_date" ColumnName="schd_date" />
+                <ScalarProperty Name="schd_time" ColumnName="schd_time" />
+                <ScalarProperty Name="sprt_guid" ColumnName="sprt_guid" />
+                <ScalarProperty Name="sprt_name" ColumnName="sprt_name" />
+                <ScalarProperty Name="evnt_guid" ColumnName="evnt_guid" />
+                <ScalarProperty Name="evnt_name" ColumnName="evnt_name" />
+                <ScalarProperty Name="evnt_venue" ColumnName="evnt_venue" />
+                <ScalarProperty Name="evnt_round" ColumnName="evnt_round" />
+                <ScalarProperty Name="EventType" ColumnName="EventType" />
+                <ScalarProperty Name="IsBracketed" ColumnName="IsBracketed" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="apiSearchAthleteByID" FunctionName="GMSTRAININGModel.Store.apiSearchAthleteByID">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GMSTRAININGModel.apiSearchAthleteByID_Result">
+                <ScalarProperty Name="athl_guid" ColumnName="athl_guid" />
+                <ScalarProperty Name="athl_first" ColumnName="athl_first" />
+                <ScalarProperty Name="athl_middle" ColumnName="athl_middle" />
+                <ScalarProperty Name="athl_last" ColumnName="athl_last" />
+                <ScalarProperty Name="athl_group" ColumnName="athl_group" />
+                <ScalarProperty Name="athl_imagepath" ColumnName="athl_imagepath" />
+                <ScalarProperty Name="delg_guid" ColumnName="delg_guid" />
+                <ScalarProperty Name="delg_name" ColumnName="delg_name" />
+                <ScalarProperty Name="game_guid" ColumnName="game_guid" />
+                <ScalarProperty Name="game_name" ColumnName="game_name" />
+                <ScalarProperty Name="sprt_guid" ColumnName="sprt_guid" />
+                <ScalarProperty Name="sprt_name" ColumnName="sprt_name" />
+                <ScalarProperty Name="evnt_guid" ColumnName="evnt_guid" />
+                <ScalarProperty Name="evnt_name" ColumnName="evnt_name" />
+                <ScalarProperty Name="rslt_bib" ColumnName="rslt_bib" />
+                <ScalarProperty Name="rslt_division" ColumnName="rslt_division" />
+                <ScalarProperty Name="rslt_date" ColumnName="rslt_date" />
+                <ScalarProperty Name="rslt_score" ColumnName="rslt_score" />
+                <ScalarProperty Name="rslt_place" ColumnName="rslt_place" />
+                <ScalarProperty Name="rslt_round" ColumnName="rslt_round" />
+                <ScalarProperty Name="rslt_matchid" ColumnName="rslt_matchid" />
+                <ScalarProperty Name="rslt_matchstatus" ColumnName="rslt_matchstatus" />
+                <ScalarProperty Name="rslt_divisionstatus" ColumnName="rslt_divisionstatus" />
+                <ScalarProperty Name="rslt_venue" ColumnName="rslt_venue" />
+                <ScalarProperty Name="rslt_personalbest" ColumnName="rslt_personalbest" />
+                <ScalarProperty Name="EventType" ColumnName="EventType" />
+                <ScalarProperty Name="IsBracketed" ColumnName="IsBracketed" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="apiSearchAthleteByEvent" FunctionName="GMSTRAININGModel.Store.apiSearchAthleteByEvent">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GMSTRAININGModel.apiSearchAthleteByEvent_Result2">
+                <ScalarProperty Name="evnt_name" ColumnName="evnt_name" />
+                <ScalarProperty Name="evnt_guid" ColumnName="evnt_guid" />
+                <ScalarProperty Name="IsBracketed" ColumnName="IsBracketed" />
+                <ScalarProperty Name="dvsn_name" ColumnName="dvsn_name" />
+                <ScalarProperty Name="dvsn_round" ColumnName="dvsn_round" />
+                <ScalarProperty Name="team_guid" ColumnName="team_guid" />
+                <ScalarProperty Name="team_name" ColumnName="team_name" />
+                <ScalarProperty Name="athl_guid" ColumnName="athl_guid" />
+                <ScalarProperty Name="athl_first" ColumnName="athl_first" />
+                <ScalarProperty Name="athl_middle" ColumnName="athl_middle" />
+                <ScalarProperty Name="athl_last" ColumnName="athl_last" />
+                <ScalarProperty Name="athl_imagepath" ColumnName="athl_imagepath" />
+                <ScalarProperty Name="delg_guid" ColumnName="delg_guid" />
+                <ScalarProperty Name="delg_name" ColumnName="delg_name" />
+                <ScalarProperty Name="athl_group" ColumnName="athl_group" />
+                <ScalarProperty Name="athl_bib" ColumnName="athl_bib" />
+                <ScalarProperty Name="athl_date" ColumnName="athl_date" />
+                <ScalarProperty Name="athl_score" ColumnName="athl_score" />
+                <ScalarProperty Name="athl_place" ColumnName="athl_place" />
+                <ScalarProperty Name="rslt_matchid" ColumnName="rslt_matchid" />
+                <ScalarProperty Name="athl_matchstatus" ColumnName="athl_matchstatus" />
+                <ScalarProperty Name="athl_divisionstatus" ColumnName="athl_divisionstatus" />
+                <ScalarProperty Name="athl_venue" ColumnName="athl_venue" />
+                <ScalarProperty Name="athl_personalbest" ColumnName="athl_personalbest" />
+                <ScalarProperty Name="EventType" ColumnName="EventType" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
